@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html {
+  min-width: 300px;
+  max-width: auto;
+  background: gray;
+}
+
+h1 {
+  font-family: 'Space Mono', monospace;
+}
+h2 {
+  font-family: 'Space Mono', monospace;
+  text-align: left;
+}
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+}
+
+thick {
+  font-weight: bold;
+  color: orange;
+  font-size: 1.5em;
+}
+
+p.small {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.5em;
+}
+
+#description {
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  border: 3px solid;
+  background-color: white;
+  padding: 40px 40px 30px 40px;
+  position: relative;
+  width: 70%;
+  margin: 0px auto 30px;
+  z-index: -1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 12px 12px 0px 0px black;
+}
+
+#title {
+  position: absolute;
+  border: 3px solid;
+  padding: 0px 20px;
+  background-color: yellow;
+  width: 450px;
+  height: 55px;
+  left: 25%;
+  top: 15px;
+  z-index: 10;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0px 0px black;
+  text-align: left;
+}
+
+header {
+  text-align: center;
+  padding: 50px 0px;
+}
+
+#description_form{
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  border: 3px solid;
+  background-color: white;
+  padding: 20px 40px 30px 40px;
+  position: relative;
+  width: 70%;
+  margin: 0px auto 75px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 12px 12px 0px 0px black;
+}
+
+#subtitle1 {
+  position: absolute;
+  border: 3px solid;
+  padding: 0px 10px 0px;
+  background-color: yellow;
+  left: 13.5%;
+  top: -37px;
+  z-index: 2;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 3px 3px 0px 0px black;
+}
+
+#subtitle2 {
+  position: absolute;
+  border: 3px solid;
+  padding: 0px 10px 0px;
+  background-color: yellow;
+  left: 13.5%;
+  top: -40px;
+  z-index: 2;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 3px 3px 0px 0px black;
+}
+
+#name {
+  width: 97%;
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+#surname {
+  width: 97%;
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+#email {
+  width: 97%;
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+#number {
+  width: 97%;
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+select {
+  width: 97%;
+  padding: 5px;
+  border: 1px solid gray;
+  resize: vertical;
+  text-overflow: ellipsis;
+}
+
+#comments {
+  width: 97%;
+  padding: 5px;
+  border: 1px solid gray;
+  height: 75px;
+}
+
+#submit {
+  font-family: 'Space Mono', monospace;
+  font-size: 2em;
+  text-align: center;
+  background: yellow;
+  border: 3px solid;
+  position: relative;
+  z-index: 3;
+  margin: 20px 0px 0px;
+  left: 35%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0px 0px black;
+}
+#submit:hover {
+  background-color: chartreuse;
+  left: 36%;
+}
+
+footer {
+  height: 50px;
+  margin: 0px;
+  width: auto;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+  /*---------main---------*/
+  
+@media screen and (min-width: 1536px){
+
+  #tribute-info, #discography {
+    width: 45vw;
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 320px) {
+  #title, h1 {
+    width: 50%;
+    letter-spacing: -0.05em;
+    word-spacing: -0,05em;
+  }
+  #submit {
+    left: 20%;
+  }
+  #submit:hover {
+    left: 21%;
+  }
+}
+
+@media screen and (max-width: 320px){
+  #title {
+    width: 60%;
+    top: 5%;
+    left: 20%;
+    /*padding: 2px;*/
+    height: 65px;
+    text-align: left;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  #description {
+    width: 92%;
+    margin: 15px auto;
+  }  
+  
+  #description_form {
+    width: 92%;
+    margin: 45px auto 75px;
+    padding: 35px 20px 20px 20px;
+  }
+  
+  #subtitle2 {
+    width: 60%;
+    top: -75px;
+    /*left: 20%;*/
+    /*padding: 2px;*/
+    /*height: 65px;*/
+    text-align: left;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    letter-spacing: -0.05em;
+    word-spacing: -0,05em;
+  }
+  #submit {
+    left: 92%-65%-20px;
+    width: 65%;
+    padding: 2px; 
+  }
+  #submit:hover {
+    left: 92%-65%-20px+1%;
+  }
+}  
