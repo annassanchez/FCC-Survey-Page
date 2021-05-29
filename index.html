@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<head>
+  <!-- link to main stylesheet -->
+	<title>A Thousand Floorplans Survey</title>
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+  
+<body>
+  <main>
+    <header>
+      <h1 id="title">A Thousand Floorplans</h1>
+      <p id="description">This survey was created for the seminar <a href="https://ddu-research.com/a-thousand-floor-plans-course-overview/" target="_blank">A Thousand Floorplans</a>, for gathering data on the conditions a dwelling must have for future tennants or buyers. Based on their answers to the survey, a computational analysis will take place and give the correct floorplan for their  spatial and social needs.</p>
+    </header>
+    
+    <form id="survey-form">
+      <div id="description_form">
+        <h2 id="subtitle1">About you</h2>
+        <label id="name-label" for="name"><p>Name<thick>*</thick>: </p></label>
+        <input id="name" type="text" name="name" class="fill-in"
+placeholder="Bucky" required>
+        <label id="surname-label" for="surname"><p>Surname<thick>*</thick>: </p></label>
+        <input id="surname" type="text" name="surname" class="fill-in"
+placeholder="Fuller" required>
+        <label id="email-label" for="email"><p>E-mail<thick>*</thick>: </p></label>
+        <input id="email" type="email" name="email" class="fill-in" placeholder="buckminster.fuller@gmail.com" required>
+        <label id="age-label" for="age"><p>Age: </p></label>
+        <input id="age" type="date" name="age" class="fill-in" placeholder="buckminster.fuller@gmail.com" required>
+
+        <label id="family-label" for="family"><p>My live-in family inclues (more than one answer is possible)<thick>*</thick>: </p></label>
+        <p.small><input id="family" type="checkbox" name="family" class="fill-in" required value="just me"> Just me<br></p.small>
+        <p.small><input id="family" type="checkbox" name="family" class="fill-in" required value="a partner"> A partner <br></p.small>
+        <p.small><input id="family" type="checkbox" name="family" class="fill-in" required value="kids"> Kids <br></p.small>
+        <p.small><input id="family" type="checkbox" name="family" class="fill-in" required value="parents"> Parents<br></p.small>
+        <p.small><input id="family" type="text" name="family" class="fill-in" placeholder="Other live-in situation"><br></p.small>
+        <label id="number-label" for="number"><p>Size of Household:<thick>*</thick>: </p></label>
+        <p.small><input id="number" type="number" name="number" class="fill-in" min="1" max="20" placeholder="1"><br></p.small>
+        <label id="ownership-label" for="ownership"><p>Home ownership (more than one answer is possible)<thick>*</thick>: </p></label>
+        <p.small><input id="ownership" type="checkbox" name="ownership" class="fill-in" required value="home owner"> I am a home owner<br></p.small>
+        <p.small><input id="ownership" type="checkbox" name="ownership" class="fill-in" required value="rent"> I live in a rented place <br></p.small>
+        <p.small><input id="ownership" type="checkbox" name="ownership" class="fill-in" required value="rent out"> I rent out a house to others <br></p.small>
+        <p.small><input id="ownership" type="checkbox" name="ownership" class="fill-in" required value="future buyer"> I intend to acquire a own home in the next 1 - 2 years<br></p.small>
+        <p.small><input id="ownership" type="text" name="ownership" class="fill-in" placeholder="Other ownership situation"><br></p.small>
+        
+      </div> 
+      
+            <div id="description_form">
+          <h2 id="subtitle2">Now the sorting starts!</h2>
+              <label id="parameters-label" for="parameters"><p>Choose seven parameters from the list<thick>*</thick>: </p></label>
+        <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required checked value="01_views"> 01_views: the amount of sky I see through the windows<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="02_views"> 02_views: how much greenery I see through the window<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="03_views"> 03_views: how much of the neighborhood houses I see from the inside<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="04_views"> 04_views: the amount of horizon line that i see on the inside<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="05_views"> 05_views: the chance of someone outside being able to look into my house<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="06_energy"> 06_energy: the expected total amount of energy used by the house for one year<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="07_energy"> 07_energy: the expected amount of heat lost through the façade<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="08_energy"> 08_energy: the amount of energy I would save from devvices and installations that actively reduce the  house's energy used (such as solar panels, special heating/cooling equipment, automated window-shades, etc).<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="09_energy"> 09_energy: the additional cost of devices and installations that actively reduce the house's energy use<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="10_daylight"> 10_daylight: the amount of daylight falling in the whole house over a year<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="11_daylight"> 11_daylight: the amount of daylight falling in the master bedroom over a year<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="12_daylight"> 12_daylight: the amount of daylight falling in the living room over a year<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="13_daylight"> 13_daylight: the amount of daylight falling in the bathroom over a year<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="14_daylight"> 14_daylight: the amount of daylight falling in the garden over a year<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="15_daylight"> 15_daylight: the amount of daylight falling in the kitchen over a year<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="16_daylight"> 16_daylight: the time of the day when the most sunlight falls in the master bedroom<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="17_daylight"> 17_daylight: the time of the day when the most sunlight falls in the living room<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="18_daylight"> 18_daylight: the time of the day when the most sunlight falls in the bathroom<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="19_daylight"> 19_daylight: the time of the day when the most sunlight falls in the garden<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="20_daylight"> 20_daylight: the time of the day when the most sunlight falls in the kitchen<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="21_orientation"> 21_orientation: the angle between the direction South and the orientation of the master bedroom<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="22_orientation"> 22_orientation: the angle between the direction South and the orientation of the living room<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="23_orientation"> 23_orientation: the angle between the direction South and the orientation of the bathroom<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="24_orientation"> 24_orientation: the angle between the direction South and the orientation of the garden<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="25_orientation"> 25_orientation: the angle between the direction South and the orientation of the kitchen<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="26_water"> 26_water: the amount of rainwater that can be collected from the roof of the house<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="27_water"> 27_water: the amount of household water that can be recycled and reused<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="28_water"> 28_water: the expected average of water use of the household in one year<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="29_costs"> 29_costs: the cost of the building shell (the walls) materials (bricks, wooden frames, concrete...)<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="30_costs"> 30_costs: the cost of the materials for windows, façade, plastering, etc<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="31_other"> 31_other: the expected time needed for construction<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="32_other"> 32_other: the amount of land left available after the house is placed on the building plot<br></p.small>
+              <p.small><input id="parameters" type="checkbox" name="parameters" class="fill-in" required value="33_other"> 33_other: the number of floors/split levels of the house<br></p.small>
+              <p.small><input id="parameters" type="text" name="parameters" class="fill-in" placeholder="Other possible parameter"><br></p.small>
+        
+        <p>Sort the chosen parameters by preference</p>
+              
+              <label id="first-label" for="first"><p>First<thick>*</thick>: </p></label>
+              <select name="dropdown" id="dropdown">
+        <option id="dropdown" name="dropdown" value="01_views_first"> 01_views: the amount of sky I see through the windows </option>
+        <option id="dropdown" name="dropdown" value="02_views_first"> 02_views: how much greenery I see through the window</option>
+        <option id="dropdown" value="03_views_first"> 03_views: how much of the neighborhood houses I see from the inside</option>
+        <option id="dropdown" value="04_views_first"> 04_views: the amount of horizon line that i see on the inside</option>
+        <option id="dropdown" value="05_views_first"> 05_views: the chance of someone outside being able to look into my house</option>
+        <option id="dropdown" value="06_energy_first"> 06_energy: the expected total amount of energy used by the house for one year</option>
+        <option id="dropdown" value="07_energy_first"> 07_energy: the expected amount of heat lost through the façade</option>
+        <option id="dropdown" value="08_energy_first"> 08_energy: the amount of energy I would save from devvices and installations that actively reduce the  house's energy used (such as solar panels, special heating/cooling equipment, automated window-shades, etc)</option>
+        <option id="dropdown" value="09_energy_first"> 09_energy: the additional cost of devices and installations that actively reduce the house's energy use</option>
+        <option id="dropdown" value="10_daylight_first"> 10_daylight: the amount of daylight falling in the whole house over a year</option>
+        <option id="dropdown" value="11_daylight_first"> 11_daylight: the amount of daylight falling in the master bedroom over a year</option>
+        <option id="dropdown" value="12_daylight_first"> 12_daylight: the amount of daylight falling in the living room over a year</option>
+        <option id="dropdown" value="13_daylight_first"> 13_daylight: the amount of daylight falling in the bathroom over a year</option>
+        <option id="dropdown" value="14_daylight_first"> 14_daylight: the amount of daylight falling in the garden over a year</option>
+        <option id="dropdown" value="15_daylight_first"> 15_daylight: the amount of daylight falling in the kitchen over a year</option>
+        <option id="dropdown" value="16_daylight_first"> 16_daylight: the time of the day when the most sunlight falls in the master bedroom</option>
+        <option id="dropdown" value="17_daylight_first"> 17_daylight: the time of the day when the most sunlight falls in the living room</option>
+        <option id="dropdown" value="18_daylight_first"> 18_daylight: the time of the day when the most sunlight falls in the bathroom</option>
+        <option id="dropdown" value="19_daylight_first"> 19_daylight: the time of the day when the most sunlight falls in the garden</option>
+        <option id="dropdown" value="20_daylight_first"> 20_daylight: the time of the day when the most sunlight falls in the kitchen</option>
+        <option id="dropdown" value="21_orientation_first"> 21_orientation: the angle between the direction South and the orientation of the master bedroom</option>
+        <option id="dropdown" value="22_orientation_first"> 22_orientation: the angle between the direction South and the orientation of the living room</option>
+        <option id="dropdown" value="23_orientation_first"> 23_orientation: the angle between the direction South and the orientation of the bathroom</option>
+        <option id="dropdown" value="24_orientation_first"> 24_orientation: the angle between the direction South and the orientation of the garden</option>
+        <option id="dropdown" value="25_orientation_first"> 25_orientation: the angle between the direction South and the orientation of the kitchen</p>
+        <option id="dropdown" value="26_water_first"> 26_water: the amount of rainwater that can be collected from the roof of the house</option>
+        <option id="dropdown" value="27_water_first"> 27_water: the amount of household water that can be recycled and reused</option>
+        <option id="dropdown" value="28_water_first"> 28_water: the expected average of water use of the household in one year</option>
+        <option id="dropdown" value="29_costs_first"> 29_costs: the cost of the building shell (the walls) materials (bricks, wooden frames, concrete...)</option>
+        <option id="dropdown" value="30_costs_first"> 30_costs: the cost of the materials for windows, façade, plastering, etc</option>
+        <option id="dropdown" value="31_other_first"> 31_other: the expected time needed for construction</option>
+        <option id="dropdown" value="32_other_first"> 32_other: the amount of land left available after the house is placed on the building plot</option>
+        <option id="dropdown" value="33_other_first"> 33_other: the number of floors/split levels of the house</option>
+              </select>
+              
+    <label id="second-label" for="second"><p>Second<thick>*</thick>: </p></label>
+              <select name="dropdown_02" id="dropdown">
+        <option value="01_views_second"> 01_views: the amount of sky I see through the windows</option>
+        <option value="02_views_second"> 02_views: how much greenery I see through the window</option>
+        <option value="03_views_second"> 03_views: how much of the neighborhood houses I see from the inside</option>
+        <option value="04_views_second"> 04_views: the amount of horizon line that i see on the inside</option>
+        <option value="05_views_second"> 05_views: the chance of someone outside being able to look into my house</option>
+        <option value="06_energy_second"> 06_energy: the expected total amount of energy used by the house for one year</option>
+        <option value="07_energy_second"> 07_energy: the expected amount of heat lost through the façade</option>
+        <option value="08_energy_second"> 08_energy: the amount of energy I would save from devvices and installations that actively reduce the  house's energy used (such as solar panels, special heating/cooling equipment, automated window-shades, etc)</option>
+        <option value="09_energy_second"> 09_energy: the additional cost of devices and installations that actively reduce the house's energy use</option>
+        <option value="10_daylight_second"> 10_daylight: the amount of daylight falling in the whole house over a year</option>
+        <option value="11_daylight_second"> 11_daylight: the amount of daylight falling in the master bedroom over a year</option>
+        <option value="12_daylight_second"> 12_daylight: the amount of daylight falling in the living room over a year</option>
+        <option value="13_daylight_second"> 13_daylight: the amount of daylight falling in the bathroom over a year</option>
+        <option value="14_daylight_second"> 14_daylight: the amount of daylight falling in the garden over a year</option>
+        <option value="15_daylight_second"> 15_daylight: the amount of daylight falling in the kitchen over a year</option>
+        <option value="16_daylight_second"> 16_daylight: the time of the day when the most sunlight falls in the master bedroom</option>
+        <option value="17_daylight_second"> 17_daylight: the time of the day when the most sunlight falls in the living room</option>
+        <option value="18_daylight_second"> 18_daylight: the time of the day when the most sunlight falls in the bathroom</option>
+        <option value="19_daylight_second"> 19_daylight: the time of the day when the most sunlight falls in the garden</option>
+        <option value="20_daylight_second"> 20_daylight: the time of the day when the most sunlight falls in the kitchen</option>
+        <option value="21_orientation_second"> 21_orientation: the angle between the direction South and the orientation of the master bedroom</option>
+        <option value="22_orientation_second"> 22_orientation: the angle between the direction South and the orientation of the living room</option>
+        <option value="23_orientation_second"> 23_orientation: the angle between the direction South and the orientation of the bathroom</option>
+        <option value="24_orientation_second"> 24_orientation: the angle between the direction South and the orientation of the garden</option>
+        <option value="25_orientation_second"> 25_orientation: the angle between the direction South and the orientation of the kitchen</p>
+        <option value="26_water_second"> 26_water: the amount of rainwater that can be collected from the roof of the house</option>
+        <option value="27_water_second"> 27_water: the amount of household water that can be recycled and reused</option>
+        <option value="28_water_second"> 28_water: the expected average of water use of the household in one year</option>
+        <option value="29_costs_second"> 29_costs: the cost of the building shell (the walls) materials (bricks, wooden frames, concrete...)</option>
+        <option value="30_costs_second"> 30_costs: the cost of the materials for windows, façade, plastering, etc</option>
+        <option value="31_other_second"> 31_other: the expected time needed for construction</option>
+        <option value="32_other_second"> 32_other: the amount of land left available after the house is placed on the building plot</option>
+        <option value="33_other_second"> 33_other: the number of floors/split levels of the house</option>
+              </select>    
+    
+<label id="third-label" for="third"><p>Third<thick>*</thick>: </p></label>
+              <select name="dropdown_03" id="dropdown">
+        <option value="01_views_third"> 01_views: the amount of sky I see through the windows</option>
+        <option value="02_views_third"> 02_views: how much greenery I see through the window</option>
+        <option value="03_views_third"> 03_views: how much of the neighborhood houses I see from the inside</option>
+        <option value="04_views_third"> 04_views: the amount of horizon line that i see on the inside</option>
+        <option value="05_views_third"> 05_views: the chance of someone outside being able to look into my house</option>
+        <option value="06_energy_third"> 06_energy: the expected total amount of energy used by the house for one year</option>
+        <option value="07_energy_third"> 07_energy: the expected amount of heat lost through the façade</option>
+        <option value="08_energy_third"> 08_energy: the amount of energy I would save from devvices and installations that actively reduce the  house's energy used (such as solar panels, special heating/cooling equipment, automated window-shades, etc)</option>
+        <option value="09_energy_third"> 09_energy: the additional cost of devices and installations that actively reduce the house's energy use</option>
+        <option value="10_daylight_third"> 10_daylight: the amount of daylight falling in the whole house over a year</option>
+        <option value="11_daylight_third"> 11_daylight: the amount of daylight falling in the master bedroom over a year</option>
+        <option value="12_daylight_third"> 12_daylight: the amount of daylight falling in the living room over a year</option>
+        <option value="13_daylight_third"> 13_daylight: the amount of daylight falling in the bathroom over a year</option>
+        <option value="14_daylight_third"> 14_daylight: the amount of daylight falling in the garden over a year</option>
+        <option value="15_daylight_third"> 15_daylight: the amount of daylight falling in the kitchen over a year</option>
+        <option value="16_daylight_third"> 16_daylight: the time of the day when the most sunlight falls in the master bedroom</option>
+        <option value="17_daylight_third"> 17_daylight: the time of the day when the most sunlight falls in the living room</option>
+        <option value="18_daylight_third"> 18_daylight: the time of the day when the most sunlight falls in the bathroom</option>
+        <option value="19_daylight_third"> 19_daylight: the time of the day when the most sunlight falls in the garden</option>
+        <option value="20_daylight_third"> 20_daylight: the time of the day when the most sunlight falls in the kitchen</option>
+        <option value="21_orientation_third"> 21_orientation: the angle between the direction South and the orientation of the master bedroom</option>
+        <option value="22_orientation_third"> 22_orientation: the angle between the direction South and the orientation of the living room</option>
+        <option value="23_orientation_third"> 23_orientation: the angle between the direction South and the orientation of the bathroom</option>
+        <option value="24_orientation_third"> 24_orientation: the angle between the direction South and the orientation of the garden</option>
+        <option value="25_orientation_third"> 25_orientation: the angle between the direction South and the orientation of the kitchen</p>
+        <option value="26_water_third"> 26_water: the amount of rainwater that can be collected from the roof of the house</option>
+        <option value="27_water_third"> 27_water: the amount of household water that can be recycled and reused</option>
+        <option value="28_water_third"> 28_water: the expected average of water use of the household in one year</option>
+        <option value="29_costs_third"> 29_costs: the cost of the building shell (the walls) materials (bricks, wooden frames, concrete...)</option>
+        <option value="30_costs_third"> 30_costs: the cost of the materials for windows, façade, plastering, etc</option>
+        <option value="31_other_third"> 31_other: the expected time needed for construction</option>
+        <option value="32_other_third"> 32_other: the amount of land left available after the house is placed on the building plot</option>
+        <option value="33_other_third"> 33_other: the number of floors/split levels of the house</option>
+              </select>
+
+<label id="fourth-label" for="fourth"><p>Fourth<thick>*</thick>: </p></label>
+              <select name="dropdown_04" id="dropdown">
+        <option value="01_views_fourth"> 01_views: the amount of sky I see through the windows</option>
+        <option value="02_views_fourth"> 02_views: how much greenery I see through the window</option>
+        <option value="03_views_fourth"> 03_views: how much of the neighborhood houses I see from the inside</option>
+        <option value="04_views_fourth"> 04_views: the amount of horizon line that i see on the inside</option>
+        <option value="05_views_fourth"> 05_views: the chance of someone outside being able to look into my house</option>
+        <option value="06_energy_fourth"> 06_energy: the expected total amount of energy used by the house for one year</option>
+        <option value="07_energy_fourth"> 07_energy: the expected amount of heat lost through the façade</option>
+        <option value="08_energy_fourth"> 08_energy: the amount of energy I would save from devvices and installations that actively reduce the  house's energy used (such as solar panels, special heating/cooling equipment, automated window-shades, etc)</option>
+        <option value="09_energy_fourth"> 09_energy: the additional cost of devices and installations that actively reduce the house's energy use</option>
+        <option value="10_daylight_fourth"> 10_daylight: the amount of daylight falling in the whole house over a year</option>
+        <option value="11_daylight_fourth"> 11_daylight: the amount of daylight falling in the master bedroom over a year</option>
+        <option value="12_daylight_fourth"> 12_daylight: the amount of daylight falling in the living room over a year</option>
+        <option value="13_daylight_fourth"> 13_daylight: the amount of daylight falling in the bathroom over a year</option>
+        <option value="14_daylight_fourth"> 14_daylight: the amount of daylight falling in the garden over a year</option>
+        <option value="15_daylight_fourth"> 15_daylight: the amount of daylight falling in the kitchen over a year</option>
+        <option value="16_daylight_fourth"> 16_daylight: the time of the day when the most sunlight falls in the master bedroom</option>
+        <option value="17_daylight_fourth"> 17_daylight: the time of the day when the most sunlight falls in the living room</option>
+        <option value="18_daylight_fourth"> 18_daylight: the time of the day when the most sunlight falls in the bathroom</option>
+        <option value="19_daylight_fourth"> 19_daylight: the time of the day when the most sunlight falls in the garden</option>
+        <option value="20_daylight_fourth"> 20_daylight: the time of the day when the most sunlight falls in the kitchen</option>
+        <option value="21_orientation_fourth"> 21_orientation: the angle between the direction South and the orientation of the master bedroom</option>
+        <option value="22_orientation_fourth"> 22_orientation: the angle between the direction South and the orientation of the living room</option>
+        <option value="23_orientation_fourth"> 23_orientation: the angle between the direction South and the orientation of the bathroom</option>
+        <option value="24_orientation_fourth"> 24_orientation: the angle between the direction South and the orientation of the garden</option>
+        <option value="25_orientation_fourth"> 25_orientation: the angle between the direction South and the orientation of the kitchen</p>
+        <option value="26_water_fourth"> 26_water: the amount of rainwater that can be collected from the roof of the house</option>
+        <option value="27_water_fourth"> 27_water: the amount of household water that can be recycled and reused</option>
+        <option value="28_water_fourth"> 28_water: the expected average of water use of the household in one year</option>
+        <option value="29_costs_fourth"> 29_costs: the cost of the building shell (the walls) materials (bricks, wooden frames, concrete...)</option>
+        <option value="30_costs_fourth"> 30_costs: the cost of the materials for windows, façade, plastering, etc</option>
+        <option value="31_other_fourth"> 31_other: the expected time needed for construction</option>
+        <option value="32_other_fourth"> 32_other: the amount of land left available after the house is placed on the building plot</option>
+        <option value="33_other_fourth"> 33_other: the number of floors/split levels of the house</option>
+              </select>
+
+<label id="fifth-label" for="fifth"><p>Fifth<thick>*</thick>: </p></label>
+              <select name="dropdown_05" id="dropdown">
+        <option value="01_views_fifth"> 01_views: the amount of sky I see through the windows</option>
+        <option value="02_views_fifth"> 02_views: how much greenery I see through the window</option>
+        <option value="03_views_fifth"> 03_views: how much of the neighborhood houses I see from the inside</option>
+        <option value="04_views_fifth"> 04_views: the amount of horizon line that i see on the inside</option>
+        <option value="05_views_fifth"> 05_views: the chance of someone outside being able to look into my house</option>
+        <option value="06_energy_fifth"> 06_energy: the expected total amount of energy used by the house for one year</option>
+        <option value="07_energy_fifth"> 07_energy: the expected amount of heat lost through the façade</option>
+        <option value="08_energy_fifth"> 08_energy: the amount of energy I would save from devvices and installations that actively reduce the  house's energy used (such as solar panels, special heating/cooling equipment, automated window-shades, etc)</option>
+        <option value="09_energy_fifth"> 09_energy: the additional cost of devices and installations that actively reduce the house's energy use</option>
+        <option value="10_daylight_fifth"> 10_daylight: the amount of daylight falling in the whole house over a year</option>
+        <option value="11_daylight_fifth"> 11_daylight: the amount of daylight falling in the master bedroom over a year</option>
+        <option value="12_daylight_fifth"> 12_daylight: the amount of daylight falling in the living room over a year</option>
+        <option value="13_daylight_fifth"> 13_daylight: the amount of daylight falling in the bathroom over a year</option>
+        <option value="14_daylight_fifth"> 14_daylight: the amount of daylight falling in the garden over a year</option>
+        <option value="15_daylight_fifth"> 15_daylight: the amount of daylight falling in the kitchen over a year</option>
+        <option value="16_daylight_fifth"> 16_daylight: the time of the day when the most sunlight falls in the master bedroom</option>
+        <option value="17_daylight_fifth"> 17_daylight: the time of the day when the most sunlight falls in the living room</option>
+        <option value="18_daylight_fifth"> 18_daylight: the time of the day when the most sunlight falls in the bathroom</option>
+        <option value="19_daylight_fifth"> 19_daylight: the time of the day when the most sunlight falls in the garden</option>
+        <option value="20_daylight_fifth"> 20_daylight: the time of the day when the most sunlight falls in the kitchen</option>
+        <option value="21_orientation_fifth"> 21_orientation: the angle between the direction South and the orientation of the master bedroom</option>
+        <option value="22_orientation_fifth"> 22_orientation: the angle between the direction South and the orientation of the living room</option>
+        <option value="23_orientation_fifth"> 23_orientation: the angle between the direction South and the orientation of the bathroom</option>
+        <option value="24_orientation_fifth"> 24_orientation: the angle between the direction South and the orientation of the garden</option>
+        <option value="25_orientation_fifth"> 25_orientation: the angle between the direction South and the orientation of the kitchen</p>
+        <option value="26_water_fifth"> 26_water: the amount of rainwater that can be collected from the roof of the house</option>
+        <option value="27_water_fifth"> 27_water: the amount of household water that can be recycled and reused</option>
+        <option value="28_water_fifth"> 28_water: the expected average of water use of the household in one year</option>
+        <option value="29_costs_fifth"> 29_costs: the cost of the building shell (the walls) materials (bricks, wooden frames, concrete...)</option>
+        <option value="30_costs_fifth"> 30_costs: the cost of the materials for windows, façade, plastering, etc</option>
+        <option value="31_other_fifth"> 31_other: the expected time needed for construction</option>
+        <option value="32_other_fifth"> 32_other: the amount of land left available after the house is placed on the building plot</option>
+        <option value="33_other_fifth"> 33_other: the number of floors/split levels of the house</option>
+              </select>
+    
+<label id="sixth-label" for="sixth"><p>Sixth<thick>*</thick>: </p></label>
+              <select name="dropdown_06" id="dropdown">
+        <option value="01_views_sixth"> 01_views: the amount of sky I see through the windows</option>
+        <option value="02_views_sixth"> 02_views: how much greenery I see through the window</option>
+        <option value="03_views_sixth"> 03_views: how much of the neighborhood houses I see from the inside</option>
+        <option value="04_views_sixth"> 04_views: the amount of horizon line that i see on the inside</option>
+        <option value="05_views_sixth"> 05_views: the chance of someone outside being able to look into my house</option>
+        <option value="06_energy_sixth"> 06_energy: the expected total amount of energy used by the house for one year</option>
+        <option value="07_energy_sixth"> 07_energy: the expected amount of heat lost through the façade</option>
+        <option value="08_energy_sixth"> 08_energy: the amount of energy I would save from devvices and installations that actively reduce the  house's energy used (such as solar panels, special heating/cooling equipment, automated window-shades, etc)</option>
+        <option value="09_energy_sixth"> 09_energy: the additional cost of devices and installations that actively reduce the house's energy use</option>
+        <option value="10_daylight_sixth"> 10_daylight: the amount of daylight falling in the whole house over a year</option>
+        <option value="11_daylight_sixth"> 11_daylight: the amount of daylight falling in the master bedroom over a year</option>
+        <option value="12_daylight_sixth"> 12_daylight: the amount of daylight falling in the living room over a year</option>
+        <option value="13_daylight_sixth"> 13_daylight: the amount of daylight falling in the bathroom over a year</option>
+        <option value="14_daylight_sixth"> 14_daylight: the amount of daylight falling in the garden over a year</option>
+        <option value="15_daylight_sixth"> 15_daylight: the amount of daylight falling in the kitchen over a year</option>
+        <option value="16_daylight_sixth"> 16_daylight: the time of the day when the most sunlight falls in the master bedroom</option>
+        <option value="17_daylight_sixth"> 17_daylight: the time of the day when the most sunlight falls in the living room</option>
+        <option value="18_daylight_sixth"> 18_daylight: the time of the day when the most sunlight falls in the bathroom</option>
+        <option value="19_daylight_sixth"> 19_daylight: the time of the day when the most sunlight falls in the garden</option>
+        <option value="20_daylight_sixth"> 20_daylight: the time of the day when the most sunlight falls in the kitchen</option>
+        <option value="21_orientation_sixth"> 21_orientation: the angle between the direction South and the orientation of the master bedroom</option>
+        <option value="22_orientation_sixth"> 22_orientation: the angle between the direction South and the orientation of the living room</option>
+        <option value="23_orientation_sixth"> 23_orientation: the angle between the direction South and the orientation of the bathroom</option>
+        <option value="24_orientation_sixth"> 24_orientation: the angle between the direction South and the orientation of the garden</option>
+        <option value="25_orientation_sixth"> 25_orientation: the angle between the direction South and the orientation of the kitchen</p>
+        <option value="26_water_sixth"> 26_water: the amount of rainwater that can be collected from the roof of the house</option>
+        <option value="27_water_sixth"> 27_water: the amount of household water that can be recycled and reused</option>
+        <option value="28_water_sixth"> 28_water: the expected average of water use of the household in one year</option>
+        <option value="29_costs_sixth"> 29_costs: the cost of the building shell (the walls) materials (bricks, wooden frames, concrete...)</option>
+        <option value="30_costs_sixth"> 30_costs: the cost of the materials for windows, façade, plastering, etc</option>
+        <option value="31_other_sixth"> 31_other: the expected time needed for construction</option>
+        <option value="32_other_sixth"> 32_other: the amount of land left available after the house is placed on the building plot</option>
+        <option value="33_other_sixth"> 33_other: the number of floors/split levels of the house</option>
+              </select>
+
+<label id="seventh-label" for="seventh"><p>Seventh<thick>*</thick>: </p></label>
+              <select name="dropdown_07" id="dropdown">
+        <option value="01_views_seventh"> 01_views: the amount of sky I see through the windows</option>
+        <option value="02_views_seventh"> 02_views: how much greenery I see through the window</option>
+        <option value="03_views_seventh"> 03_views: how much of the neighborhood houses I see from the inside</option>
+        <option value="04_views_seventh"> 04_views: the amount of horizon line that i see on the inside</option>
+        <option value="05_views_seventh"> 05_views: the chance of someone outside being able to look into my house</option>
+        <option value="06_energy_seventh"> 06_energy: the expected total amount of energy used by the house for one year</option>
+        <option value="07_energy_seventh"> 07_energy: the expected amount of heat lost through the façade</option>
+        <option value="08_energy_seventh"> 08_energy: the amount of energy I would save from devvices and installations that actively reduce the  house's energy used (such as solar panels, special heating/cooling equipment, automated window-shades, etc)</option>
+        <option value="09_energy_seventh"> 09_energy: the additional cost of devices and installations that actively reduce the house's energy use</option>
+        <option value="10_daylight_seventh"> 10_daylight: the amount of daylight falling in the whole house over a year</option>
+        <option value="11_daylight_seventh"> 11_daylight: the amount of daylight falling in the master bedroom over a year</option>
+        <option value="12_daylight_seventh"> 12_daylight: the amount of daylight falling in the living room over a year</option>
+        <option value="13_daylight_seventh"> 13_daylight: the amount of daylight falling in the bathroom over a year</option>
+        <option value="14_daylight_seventh"> 14_daylight: the amount of daylight falling in the garden over a year</option>
+        <option value="15_daylight_seventh"> 15_daylight: the amount of daylight falling in the kitchen over a year</option>
+        <option value="16_daylight_seventh"> 16_daylight: the time of the day when the most sunlight falls in the master bedroom</option>
+        <option value="17_daylight_seventh"> 17_daylight: the time of the day when the most sunlight falls in the living room</option>
+        <option value="18_daylight_seventh"> 18_daylight: the time of the day when the most sunlight falls in the bathroom</option>
+        <option value="19_daylight_seventh"> 19_daylight: the time of the day when the most sunlight falls in the garden</option>
+        <option value="20_daylight_seventh"> 20_daylight: the time of the day when the most sunlight falls in the kitchen</option>
+        <option value="21_orientation_seventh"> 21_orientation: the angle between the direction South and the orientation of the master bedroom</option>
+        <option value="22_orientation_seventh"> 22_orientation: the angle between the direction South and the orientation of the living room</option>
+        <option value="23_orientation_seventh"> 23_orientation: the angle between the direction South and the orientation of the bathroom</option>
+        <option value="24_orientation_seventh"> 24_orientation: the angle between the direction South and the orientation of the garden</option>
+        <option value="25_orientation_seventh"> 25_orientation: the angle between the direction South and the orientation of the kitchen</p>
+        <option value="26_water_seventh"> 26_water: the amount of rainwater that can be collected from the roof of the house</option>
+        <option value="27_water_seventh"> 27_water: the amount of household water that can be recycled and reused</option>
+        <option value="28_water_seventh"> 28_water: the expected average of water use of the household in one year</option>
+        <option value="29_costs_seventh"> 29_costs: the cost of the building shell (the walls) materials (bricks, wooden frames, concrete...)</option>
+        <option value="30_costs_seventh"> 30_costs: the cost of the materials for windows, façade, plastering, etc</option>
+        <option value="31_other_seventh"> 31_other: the expected time needed for construction</option>
+        <option value="32_other_seventh"> 32_other: the amount of land left available after the house is placed on the building plot</option>
+        <option value="33_other_seventh"> 33_other: the number of floors/split levels of the house</option>
+              </select>
+
+<label id="moreinfo-label" for="moreinfo"><p>From which parameters would you like more information before deciding:</p></label>
+
+        <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required checked value="01_views_moreinfo"> 01_views: the amount of sky I see through the windows<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="02_views_moreinfo"> 02_views: how much greenery I see through the window<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="03_views_moreinfo"> 03_views: how much of the neighborhood houses I see from the inside<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="04_views_moreinfo"> 04_views: the amount of horizon line that i see on the inside<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="05_views_moreinfo"> 05_views: the chance of someone outside being able to look into my house<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="06_energy_moreinfo"> 06_energy: the expected total amount of energy used by the house for one year<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="07_energy_moreinfo"> 07_energy: the expected amount of heat lost through the façade<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="08_energy_moreinfo"> 08_energy: the amount of energy I would save from devvices and installations that actively reduce the  house's energy used (such as solar panels, special heating/cooling equipment, automated window-shades, etc).<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="09_energy_moreinfo"> 09_energy: the additional cost of devices and installations that actively reduce the house's energy use<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="10_daylight_moreinfo"> 10_daylight: the amount of daylight falling in the whole house over a year<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="11_daylight_moreinfo"> 11_daylight: the amount of daylight falling in the master bedroom over a year<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="12_daylight_moreinfo"> 12_daylight: the amount of daylight falling in the living room over a year<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="13_daylight_moreinfo"> 13_daylight: the amount of daylight falling in the bathroom over a year<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="14_daylight_moreinfo"> 14_daylight: the amount of daylight falling in the garden over a year<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="15_daylight_moreinfo"> 15_daylight: the amount of daylight falling in the kitchen over a year<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="16_daylight_moreinfo"> 16_daylight: the time of the day when the most sunlight falls in the master bedroom<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="17_daylight_moreinfo"> 17_daylight: the time of the day when the most sunlight falls in the living room<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="18_daylight_moreinfo"> 18_daylight: the time of the day when the most sunlight falls in the bathroom<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="19_daylight_moreinfo"> 19_daylight: the time of the day when the most sunlight falls in the garden<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="20_daylight_moreinfo"> 20_daylight: the time of the day when the most sunlight falls in the kitchen<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="21_orientation_moreinfo"> 21_orientation: the angle between the direction South and the orientation of the master bedroom<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="22_orientation_moreinfo"> 22_orientation: the angle between the direction South and the orientation of the living room<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="23_orientation_moreinfo"> 23_orientation: the angle between the direction South and the orientation of the bathroom<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="24_orientation_moreinfo"> 24_orientation: the angle between the direction South and the orientation of the garden<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="25_orientation_moreinfo"> 25_orientation: the angle between the direction South and the orientation of the kitchen<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="26_water_moreinfo"> 26_water: the amount of rainwater that can be collected from the roof of the house<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="27_water_moreinfo"> 27_water: the amount of household water that can be recycled and reused<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="28_water_moreinfo"> 28_water: the expected average of water use of the household in one year<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="29_costs_moreinfo"> 29_costs: the cost of the building shell (the walls) materials (bricks, wooden frames, concrete...)<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="30_costs_moreinfo"> 30_costs: the cost of the materials for windows, façade, plastering, etc<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="31_other_moreinfo"> 31_other: the expected time needed for construction<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="32_other_moreinfo"> 32_other: the amount of land left available after the house is placed on the building plot<br></p.small>
+              <p.small><input id="moreinfo" type="checkbox" name="moreinfo" class="fill-in" required value="33_other_moreinfo"> 33_other: the number of floors/split levels of the house<br></p.small>
+
+        <label id="irrelevant"><p>Which sorting parameters you think are irrelevant?</p></label>
+              <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required checked value="01_views"> 01_views: the amount of sky I see through the windows<br></p.small>
+              <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="02_views"> 02_views: how much greenery I see through the window<br></p.small>
+              <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="03_views"> 03_views: how much of the neighborhood houses I see from the inside<br></p.small>
+              <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="04_views_seventh"> 04_views: the amount of horizon line that i see on the inside<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="05_views_seventh"> 05_views: the chance of someone outside being able to look into my house<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="06_energy_seventh"> 06_energy: the expected total amount of energy used by the house for one year<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="07_energy_seventh"> 07_energy: the expected amount of heat lost through the façade<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="08_energy_seventh"> 08_energy: the amount of energy I would save from devvices and installations that actively reduce the  house's energy used (such as solar panels, special heating/cooling equipment, automated window-shades, etc)<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="09_energy_seventh"> 09_energy: the additional cost of devices and installations that actively reduce the house's energy use<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="10_daylight_seventh"> 10_daylight: the amount of daylight falling in the whole house over a year<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="11_daylight_seventh"> 11_daylight: the amount of daylight falling in the master bedroom over a year<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="12_daylight_seventh"> 12_daylight: the amount of daylight falling in the living room over a year<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="13_daylight_seventh"> 13_daylight: the amount of daylight falling in the bathroom over a year<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="14_daylight_seventh"> 14_daylight: the amount of daylight falling in the garden over a year<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="15_daylight_seventh"> 15_daylight: the amount of daylight falling in the kitchen over a year<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="16_daylight_seventh"> 16_daylight: the time of the day when the most sunlight falls in the master bedroom<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="17_daylight_seventh"> 17_daylight: the time of the day when the most sunlight falls in the living room<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="18_daylight_seventh"> 18_daylight: the time of the day when the most sunlight falls in the bathroom<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="19_daylight_seventh"> 19_daylight: the time of the day when the most sunlight falls in the garden<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="20_daylight_seventh"> 20_daylight: the time of the day when the most sunlight falls in the kitchen<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="21_orientation_seventh"> 21_orientation: the angle between the direction South and the orientation of the master bedroom<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="22_orientation_seventh"> 22_orientation: the angle between the direction South and the orientation of the living room<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="23_orientation_seventh"> 23_orientation: the angle between the direction South and the orientation of the bathroom<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="24_orientation_seventh"> 24_orientation: the angle between the direction South and the orientation of the garden<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="25_orientation_seventh"> 25_orientation: the angle between the direction South and the orientation of the kitchen<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="26_water_seventh"> 26_water: the amount of rainwater that can be collected from the roof of the house<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="27_water_seventh"> 27_water: the amount of household water that can be recycled and reused<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="28_water_seventh"> 28_water: the expected average of water use of the household in one year<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="29_costs_seventh"> 29_costs: the cost of the building shell (the walls) materials (bricks, wooden frames, concrete...)<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="30_costs_seventh"> 30_costs: the cost of the materials for windows, façade, plastering, etc<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="31_other_seventh"> 31_other: the expected time needed for construction<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="32_other_seventh"> 32_other: the amount of land left available after the house is placed on the building plot<br></p.small>
+        <p.small><input id="irrelevant" type="radio" name="ownership" class="fill-in" required value="33_other_seventh"> 33_other: the number of floors/split levels of the house</p.small>
+
+
+
+<label for="comments"><p>If you have any suggestions, comments or questions...</p><br></label>
+              <textarea id="comments" placeholder="...write them here"></textarea>
+        <div class="group">
+          <button id="submit" type="submit"><span>Send answer</span></button>
+        </div>  
+    </div>
+
+    </form>
+    
+    <footer>
+      <p>Developed with ❤️ by annassanchez, you can find me in <a href="https://github.com/annassanchez" target="_blank">codepen</a>, <a href="https://codepen.io/annassanchez" target="_blank">github</a> or <a href="https://twitter.com/amoaloskiwis" target="_blank">twitter</a> | FCC Survey Form assignment</p>
+    </footer>
+  </main>
+</body>
